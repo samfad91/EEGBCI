@@ -48,7 +48,8 @@ let state = {
   selectedDevices: [],
   selectedParadigms: [],
   selectedBciMethods: [],
-  selectedMlMethods: []
+  selectedMlMethods: [],
+  minYear: 2020 // Default minimum year
 };
 
 // DOM Elements
@@ -62,6 +63,8 @@ const resultsContainer = document.getElementById('resultsContainer');
 const resultCount = document.getElementById('resultCount');
 const clearFiltersBtn = document.getElementById('clearFilters');
 const activeFiltersDisplay = document.getElementById('activeFilters');
+const yearRange = document.getElementById('year-range');
+const selectedYear = document.getElementById('selected-year');
 
 // Initialize the app
 function init() {
@@ -73,6 +76,14 @@ function init() {
   renderResults();
   updateActiveFilters();
   setupEventListeners();
+  
+  // Set up year range listener
+  yearRange.addEventListener('input', function() {
+    state.minYear = parseInt(this.value);
+    selectedYear.textContent = this.value;
+    renderResults();
+    updateActiveFilters();
+  });
 }
 
 // Render filter buttons
@@ -178,7 +189,10 @@ function filterPapers() {
     const matchesMlMethod = 
       state.selectedMlMethods.length === 0 || state.selectedMlMethods.includes(paper.mlMethod);
     
-    return matchesSearch && matchesType && matchesDevice && matchesParadigm && matchesBciMethod && matchesMlMethod;
+    // Check if paper year is greater than or equal to selected minimum year
+    const matchesYear = paper.year >= state.minYear;
+    
+    return matchesSearch && matchesType && matchesDevice && matchesParadigm && matchesBciMethod && matchesMlMethod && matchesYear;
   });
 }
 
@@ -187,6 +201,7 @@ function updateActiveFilters() {
   const activeFilters = [];
   
   if (state.searchTerm) activeFilters.push(`Search: "${state.searchTerm}"`);
+  if (state.minYear > 2020) activeFilters.push(`Year: ${state.minYear}-2025`);
   if (state.selectedTypes.length > 0) activeFilters.push(`Types: ${state.selectedTypes.join(', ')}`);
   if (state.selectedDevices.length > 0) activeFilters.push(`Devices: ${state.selectedDevices.join(', ')}`);
   if (state.selectedParadigms.length > 0) activeFilters.push(`Paradigms: ${state.selectedParadigms.join(', ')}`);
@@ -250,8 +265,11 @@ function setupEventListeners() {
     state.selectedParadigms = [];
     state.selectedBciMethods = [];
     state.selectedMlMethods = [];
+    state.minYear = 2020;
     
     searchInput.value = '';
+    yearRange.value = 2020;
+    selectedYear.textContent = '2020';
     renderTypeFilters();
     renderDeviceFilters();
     renderParadigmFilters();
@@ -265,5 +283,3 @@ function setupEventListeners() {
 // Make toggleFilter available globally
 window.toggleFilter = toggleFilter;
 loadPapersData();
-// Initialize the app
-init();
