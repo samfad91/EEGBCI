@@ -32,6 +32,31 @@
           >
         </div>
 
+        <!-- Year Filter -->
+        <div class="filter-section">
+          <h3 class="filter-title">Year Range</h3>
+          <input 
+            type="range" 
+            class="w-full" 
+            id="year-range" 
+            min="2020" 
+            max="2025" 
+            step="1" 
+            value="2020"
+          >
+          <div class="flex justify-between mt-1">
+            <span class="text-xs">2020</span>
+            <span class="text-xs">2021</span>
+            <span class="text-xs">2022</span>
+            <span class="text-xs">2023</span>
+            <span class="text-xs">2024</span>
+            <span class="text-xs">2025</span>
+          </div>
+          <div class="mt-2 text-sm font-medium">
+            Year From: <span id="selected-year" class="font-bold">2020</span> To 2025
+          </div>
+        </div>
+
         <!-- Brainwave Type Filter -->
         <div class="filter-section">
           <h3 class="filter-title">Rhythms Type</h3>
@@ -116,5 +141,15 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // Year range slider functionality
+    const yearRange = document.getElementById('year-range');
+    const selectedYear = document.getElementById('selected-year');
+    
+    yearRange.addEventListener('input', function() {
+      selectedYear.textContent = this.value;
+      applyFilters();
+    });
+  </script>
 </body>
 </html>
