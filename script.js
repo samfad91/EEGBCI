@@ -1,89 +1,27 @@
+// Global variable to hold papers data
+let papers = [];
+
 // Initialize Lucide icons
 lucide.createIcons();
 
-// Research paper data with added links
-const papers = [
-  {
-    id: 1,
-    title: 'EEG-Based BCI Using Theta Waves for Motor Imagery Classification',
-    authors: 'Smith et al.',
-    year: 2023,
-    type: 'Theta',
-    device: 'Neurosky',
-    paradigm: 'One paradigm',
-    bciMethod: 'Spatial Filter',
-    mlMethod: 'CSP',
-    abstract: 'This study explores theta wave patterns during motor imagery tasks...',
-    link: 'https://doi.org/10.1016/j.neulet.2023.123456' // Example DOI link
-  },
-  {
-    id: 2,
-    title: 'Hybrid P300-SSVEP BCI with Alpha Wave Enhancement',
-    authors: 'Johnson et al.',
-    year: 2022,
-    type: 'Alpha',
-    device: 'Emotiv',
-    paradigm: 'Hybrid',
-    bciMethod: 'Wavelet Transform',
-    mlMethod: 'SVM',
-    abstract: 'Combining P300 and SSVEP paradigms with alpha wave processing...',
-    link: 'https://doi.org/10.1016/j.neulet.2022.654321'
-  },
-  {
-    id: 3,
-    title: 'Gamma Wave Detection in EEG Using End-to-End Deep Learning',
-    authors: 'Chen et al.',
-    year: 2023,
-    type: 'Gamma',
-    device: 'OpenBCI',
-    paradigm: 'One paradigm',
-    bciMethod: 'Neural Network End-to-End Framework',
-    mlMethod: 'MLP',
-    abstract: 'Novel approach for gamma wave detection without manual feature extraction...',
-    link: 'https://doi.org/10.1016/j.neulet.2023.789012'
-  },
-  {
-    id: 4,
-    title: 'Beta Wave Analysis for Artifact Detection in Mobile EEG',
-    authors: 'Rodriguez et al.',
-    year: 2021,
-    type: 'Beta',
-    device: 'InteraXon',
-    paradigm: 'One paradigm',
-    bciMethod: 'Digital Filter',
-    mlMethod: 'Rule-based',
-    abstract: 'Real-time artifact detection system using beta wave characteristics...',
-    link: 'https://doi.org/10.1016/j.neulet.2021.345678'
-  },
-  {
-    id: 5,
-    title: 'Delta Wave Patterns in Sleep Monitoring BCI',
-    authors: 'Kim et al.',
-    year: 2022,
-    type: 'Delta',
-    device: 'MyndPlay',
-    paradigm: 'One paradigm',
-    bciMethod: 'Empirical Mode Decomposition',
-    mlMethod: 'HMM',
-    abstract: 'Sleep stage classification using delta wave analysis...',
-    link: 'https://doi.org/10.1016/j.neulet.2022.987654'
-  },
-  {
-    id: 6,
-    title: 'Multiclass Motor Imagery Classification Using Riemannian Geometry',
-    authors: 'Wilson et al.',
-    year: 2023,
-    type: 'Theta',
-    device: 'OpenBCI',
-    paradigm: 'One paradigm',
-    bciMethod: 'Spatial Filter',
-    mlMethod: 'Riemannian Geometry-Based Classification',
-    abstract: 'Advanced classification method for motor imagery tasks...',
-    link: 'https://doi.org/10.1016/j.neulet.2023.567890'
+// Function to load papers data
+async function loadPapersData() {
+  try {
+    const response = await fetch('references.json');
+    if (!response.ok) {
+      throw new Error('Failed to load papers data');
+    }
+    papers = await response.json();
+    init(); // Initialize the app after data is loaded
+  } catch (error) {
+    console.error('Error loading papers data:', error);
+    // Fallback to empty array if loading fails
+    papers = [];
+    init();
   }
-];
+}
 
-// Filter options
+// Filter options (keep these as they are)
 const types = ['Delta', 'Theta', 'Alpha', 'Beta', 'Gamma'];
 const devices = ['Neurosky', 'Emotiv', 'InteraXon', 'MyndPlay', 'OpenBCI'];
 const paradigms = ['One paradigm', 'Hybrid'];
@@ -326,6 +264,6 @@ function setupEventListeners() {
 
 // Make toggleFilter available globally
 window.toggleFilter = toggleFilter;
-
+loadPapersData();
 // Initialize the app
 init();
