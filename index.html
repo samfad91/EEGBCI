@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reference Filter App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+   body {
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url('back2.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+    .type-article { background-color: #dbeafe; color: #1e40af; border-color: #93c5fd; }
+    .type-video { background-color: #f3e8ff; color: #6b21a8; border-color: #c4b5fd; }
+    .type-book { background-color: #fef3c7; color: #92400e; border-color: #fcd34d; }
+    .type-website { background-color: #dcfce7; color: #166534; border-color: #86efac; }
+    .category-design { background-color: #fce7f3; color: #9d174d; border-color: #f9a8d4; }
+    .category-development { background-color: #e0e7ff; color: #3730a3; border-color: #a5b4fc; }
+    .category-research { background-color: #d1fae5; color: #065f46; border-color: #6ee7b7; }
+    .category-business { background-color: #ffe4e6; color: #9f1239; border-color: #fda4af; }
+  </style>
+</head>
+<body class="p-4 md:p-8">
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-white/90 backdrop-blur-sm rounded-xl border-2 border-gray-200 shadow-lg overflow-hidden">
+      <!-- Header -->
+      <div class="p-6 border-b border-gray-200">
+        <h1 class="text-3xl font-bold text-gray-800">EEG BCI Robotics </h1>
+        <p class="text-gray-600">This visualization presents a comprehensive overview of EEG-BCI systems, covering each stage from signal acquisition to real-world execution. It provides interactive tools to explore, choose, and filter articles based on specific criteria, helping you navigate topics</p>
+      </div>
+      
+      <!-- Main Content -->
+      <div class="p-6 space-y-6">
+        <!-- Search -->
+        <div>
+          <input 
+            id="searchInput"
+            type="text" 
+            placeholder="Search by title or author..." 
+            class="w-full px-4 py-2 bg-white border-2 border-gray-300 rounded-md focus:border-blue-500 focus:ring-blue-500 focus:outline-none"
+          >
+        </div>
+        
+        <!-- Filters -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Type Filter -->
+          <div class="space-y-2">
+            <h3 class="font-medium text-lg text-gray-700">Filter by Type</h3>
+            <div class="flex flex-wrap gap-2" id="typeFilters">
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </div>
+          
+          <!-- Category Filter -->
+          <div class="space-y-2">
+            <h3 class="font-medium text-lg text-gray-700">Filter by Category</h3>
+            <div class="flex flex-wrap gap-2" id="categoryFilters">
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+        
+        <!-- Results -->
+        <div class="space-y-4">
+          <div class="flex justify-between items-center">
+            <h3 class="font-medium text-lg text-gray-700">Results (<span id="resultCount">0</span>)</h3>
+            <button id="clearFilters" class="text-blue-600 hover:text-blue-800 hover:underline">
+              Clear all filters
+            </button>
+          </div>
+          
+          <div class="grid grid-cols-1 gap-4" id="resultsContainer">
+            <!-- Will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="mt-8 py-6 border-t border-gray-200 bg-white/80 backdrop-blur-sm rounded-lg">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="text-center md:text-left">
+            <p class="text-gray-700 font-medium">Created by <span class="text-blue-600">Your Name</span></p>
+            <p class="text-sm text-gray-500">Research Reference Management System</p>
+          </div>
+          
+          <div class="flex items-center justify-center gap-6">
+            <!-- University logos -->
+            <div class="flex flex-col items-center">
+              <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 flex items-center justify-center text-xs text-gray-500">
+                Uni 1
+              </div>
+              <span class="mt-2 text-xs text-gray-600">University A</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 flex items-center justify-center text-xs text-gray-500">
+                Uni 2
+              </div>
+              <span class="mt-2 text-xs text-gray-600">University B</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 flex items-center justify-center text-xs text-gray-500">
+                Uni 3
+              </div>
+              <span class="mt-2 text-xs text-gray-600">University C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Reference data
+    const references = [
+      { id: 1, title: 'React Design Patterns', type: 'article', category: 'development', year: 2023, author: 'Sarah Johnson' },
+      { id: 2, title: 'UX Research Methods', type: 'book', category: 'design', year: 2022, author: 'Michael Chen' },
+      { id: 3, title: 'Advanced CSS Techniques', type: 'video', category: 'development', year: 2023, author: 'Emma Wilson' },
+      { id: 4, title: 'Startup Funding Strategies', type: 'website', category: 'business', year: 2021, author: 'David Kim' },
+      { id: 5, title: 'User Testing Best Practices', type: 'article', category: 'design', year: 2023, author: 'Lisa Rodriguez' },
+      { id: 6, title: 'JavaScript Performance Optimization', type: 'video', category: 'development', year: 2022, author: 'James Peterson' },
+    ];
+    
+    // Filter options
+    const types = ['article', 'video', 'book', 'website'];
+    const categories = ['design', 'development', 'research', 'business'];
+    
+    // State
+    let state = {
+      searchTerm: '',
+      selectedTypes: [],
+      selectedCategories: []
+    };
+    
+    // DOM Elements
+    const searchInput = document.getElementById('searchInput');
+    const typeFiltersContainer = document.getElementById('typeFilters');
+    const categoryFiltersContainer = document.getElementById('categoryFilters');
+    const resultsContainer = document.getElementById('resultsContainer');
+    const resultCount = document.getElementById('resultCount');
+    const clearFiltersBtn = document.getElementById('clearFilters');
+    
+    // Initialize the app
+    function init() {
+      renderTypeFilters();
+      renderCategoryFilters();
+      renderResults();
+      setupEventListeners();
+    }
+    
+    // Render type filters
+    function renderTypeFilters() {
+      typeFiltersContainer.innerHTML = types.map(type => `
+        <button 
+          onclick="toggleFilter('type', '${type}')"
+          class="px-4 py-2 rounded-md border capitalize ${state.selectedTypes.includes(type) ? `type-${type} border-2` : 'bg-white border-gray-300'}"
+        >
+          ${state.selectedTypes.includes(type) ? '<i data-lucide="check" class="w-4 h-4 inline mr-2"></i>' : ''}
+          ${type}
+        </button>
+      `).join('');
+      lucide.createIcons();
+    }
+    
+    // Render category filters
+    function renderCategoryFilters() {
+      categoryFiltersContainer.innerHTML = categories.map(category => `
+        <button 
+          onclick="toggleFilter('category', '${category}')"
+          class="px-4 py-2 rounded-md border capitalize ${state.selectedCategories.includes(category) ? `category-${category} border-2` : 'bg-white border-gray-300'}"
+        >
+          ${state.selectedCategories.includes(category) ? '<i data-lucide="check" class="w-4 h-4 inline mr-2"></i>' : ''}
+          ${category}
+        </button>
+      `).join('');
+      lucide.createIcons();
+    }
+    
+    // Render results
+    function renderResults() {
+      const filtered = filterReferences();
+      resultCount.textContent = filtered.length;
+      
+      if (filtered.length === 0) {
+        resultsContainer.innerHTML = `
+          <div class="text-center py-8">
+            <div class="mx-auto w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+              <i data-lucide="frown" class="w-8 h-8 text-gray-400"></i>
+            </div>
+            <h4 class="text-lg font-medium text-gray-700">No references found</h4>
+            <p class="text-gray-500">Try adjusting your search or filters</p>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+      
+      resultsContainer.innerHTML = filtered.map(ref => `
+        <div class="bg-white rounded-lg border-2 border-gray-200 hover:border-blue-300 transition-colors overflow-hidden">
+          <div class="p-4">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+              <div class="space-y-2">
+                <h4 class="font-bold text-lg text-gray-800">${ref.title}</h4>
+                <p class="text-gray-600">${ref.author} • ${ref.year}</p>
+                <div class="flex gap-2">
+                  <span class="text-xs px-2 py-1 rounded-full type-${ref.type}">
+                    ${ref.type}
+                  </span>
+                  <span class="text-xs px-2 py-1 rounded-full category-${ref.category}">
+                    ${ref.category}
+                  </span>
+                </div>
+              </div>
+              <button class="px-4 py-2 border border-blue-500 text-blue-600 hover:bg-blue-50 rounded-md">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    // Filter references based on state
+    function filterReferences() {
+      return references.filter(ref => {
+        const matchesSearch = 
+          ref.title.toLowerCase().includes(state.searchTerm.toLowerCase()) || 
+          ref.author.toLowerCase().includes(state.searchTerm.toLowerCase());
+        const matchesType = 
+          state.selectedTypes.length === 0 || state.selectedTypes.includes(ref.type);
+        const matchesCategory = 
+          state.selectedCategories.length === 0 || state.selectedCategories.includes(ref.category);
+        return matchesSearch && matchesType && matchesCategory;
+      });
+    }
+    
+    // Toggle filter selection
+    function toggleFilter(filterType, value) {
+      if (filterType === 'type') {
+        state.selectedTypes = state.selectedTypes.includes(value) 
+          ? state.selectedTypes.filter(t => t !== value) 
+          : [...state.selectedTypes, value];
+        renderTypeFilters();
+      } else {
+        state.selectedCategories = state.selectedCategories.includes(value) 
+          ? state.selectedCategories.filter(c => c !== value) 
+          : [...state.selectedCategories, value];
+        renderCategoryFilters();
+      }
+      renderResults();
+    }
+    
+    // Setup event listeners
+    function setupEventListeners() {
+      searchInput.addEventListener('input', (e) => {
+        state.searchTerm = e.target.value;
+        renderResults();
+      });
+      
+      clearFiltersBtn.addEventListener('click', () => {
+        state.searchTerm = '';
+        state.selectedTypes = [];
+        state.selectedCategories = [];
+        searchInput.value = '';
+        renderTypeFilters();
+        renderCategoryFilters();
+        renderResults();
+      });
+    }
+    
+    // Make toggleFilter available globally
+    window.toggleFilter = toggleFilter;
+    
+    // Initialize the app
+    init();
+  </script>
+</body>
+</html>
