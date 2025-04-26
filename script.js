@@ -14,7 +14,8 @@
         paradigm: 'One paradigm',
         bciMethod: 'Spatial Filter',
         mlMethod: 'CSP',
-        abstract: 'This study explores theta wave patterns during motor imagery tasks...'
+        abstract: 'This study explores theta wave patterns during motor imagery tasks...',
+        link: 'https://example.com/paper1' // Add this
       },
       {
         id: 2,
