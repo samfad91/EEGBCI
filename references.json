@@ -10,7 +10,7 @@
         "bciMethod": "Phase-Amplitude Coupling",
         "mlMethod": "Signal Processing",
         "abstract": "Investigation of δ-γ phase-amplitude coupling in motor imagery EEG.",
-        "link": "https://doi.org/10.1016/j.bspc.2025.106958"
+        "link": "https://www.sciencedirect.com/science/article/abs/pii/S1746809424010164"
       },
       {
         "id": 2,
@@ -23,7 +23,7 @@
         "bciMethod": "CNN Encoding",
         "mlMethod": "Deep Learning",
         "abstract": "This paper presents a multi-view CNN approach for motor imagery EEG signal classification.",
-        "link": "https://doi.org/10.1016/j.bspc.2023.105063"
+        "link": "https://www.sciencedirect.com/science/article/abs/pii/S1746809423004962"
       },
       {
         "id": 3,
@@ -36,7 +36,7 @@
         "bciMethod": "Phase-Based Connectivity",
         "mlMethod": "Feature Extraction",
         "abstract": "Study on continuous decoding of hand movements using phase connectivity in EEG signals.",
-        "link": "https://doi.org/10.3389/fnhum.2022.901285"
+        "link": "https://pubmed.ncbi.nlm.nih.gov/35845243/"
       },
       {
         "id": 4,
@@ -49,7 +49,7 @@
         "bciMethod": "Delta Rhythm Analysis",
         "mlMethod": "LightGBM",
         "abstract": "Improving MI-BCI classification using delta rhythm features and LightGBM algorithm.",
-        "link": "https://doi.org/10.1016/j.bspc.2022.103102"
+        "link": "https://ouci.dntb.gov.ua/en/works/4kOymaN4/"
       },
       {
         "id": 5,
@@ -62,7 +62,7 @@
         "bciMethod": "Oscillation Analysis",
         "mlMethod": "Signal Processing",
         "abstract": "Investigating brain oscillations during robotic hand intervention for stroke recovery.",
-        "link": "https://doi.org/10.3389/fnins.2023.1241772"
+        "link": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1241772/full"
       },
       {
         "id": 6,
@@ -75,7 +75,7 @@
         "bciMethod": "Multi-State Fusion",
         "mlMethod": "Explainable AI",
         "abstract": "Explainable deep learning approach for BCI-supported lower extremity motor recovery.",
-        "link": "https://doi.org/10.1109/TNSRE.2024.[article-number]"
+        "link": "https://pubmed.ncbi.nlm.nih.gov/38578854/"
       },
       {
         "id": 7,
@@ -88,7 +88,7 @@
         "bciMethod": "Functional Connectivity",
         "mlMethod": "Feature Extraction",
         "abstract": "Multi-frequency band analysis of EEG for emotion recognition applications.",
-        "link": "https://doi.org/10.1016/j.bspc.2023.104157"
+        "link": "https://www.sciencedirect.com/science/article/abs/pii/S1746809422006115"
       },
       {
         "id": 8,
@@ -101,7 +101,7 @@
         "bciMethod": "Signal Processing",
         "mlMethod": "Variability Reduction",
         "abstract": "Novel procedure to minimize EEG variability in BCI systems.",
-        "link": "https://doi.org/10.1016/j.bspc.2024.105745"
+        "link": "https://www.sciencedirect.com/science/article/abs/pii/S1746809423011783"
       },
       {
         "id": 9,
@@ -114,7 +114,7 @@
         "bciMethod": "Wavelet Transform",
         "mlMethod": "Feature Extraction",
         "abstract": "Salient feature extraction from EEG using redundant discrete wavelet transform.",
-        "link": "https://doi.org/10.3389/fnins.2022.921642"
+        "link": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.921642/full"
       },
       {
         "id": 10,
@@ -127,7 +127,7 @@
         "bciMethod": "Functional Connectivity",
         "mlMethod": "Signal Processing",
         "abstract": "Investigation of brain connectivity during lower limb movement states.",
-        "link": "https://doi.org/10.3390/s24217016"
+        "link": "https://www.mdpi.com/1424-8220/24/21/7016"
       },
       {
         "id": 11,
@@ -140,7 +140,7 @@
         "bciMethod": "Signal Decoding",
         "mlMethod": "Pattern Recognition",
         "abstract": "EEG signal decoding during observation of robotic arm movements.",
-        "link": "https://doi.org/10.1109/ACCESS.2024.[article-number]"
+        "link": "https://ieeexplore.ieee.org/document/10806707"
       },
       {
         "id": 12,
@@ -153,7 +153,7 @@
         "bciMethod": "Frequency Analysis",
         "mlMethod": "Residual Neural Networks",
         "abstract": "MDD classification using ResNets on specific EEG frequencies and regions.",
-        "link": "https://doi.org/10.1109/TNSRE.2023.[article-number]"
+        "link": "https://pubmed.ncbi.nlm.nih.gov/37418412/"
       },
       {
         "id": 13,
@@ -166,7 +166,7 @@
         "bciMethod": "Signal Classification",
         "mlMethod": "Machine Learning",
         "abstract": "EEG classification for dyslexia using BCI and linguistic software tools.",
-        "link": "https://doi.org/10.1016/j.bspc.2022.103646"
+        "link": "https://www.sciencedirect.com/science/article/abs/pii/S1746809422001689"
       },
       {
         "id": 14,
@@ -179,6 +179,244 @@
         "bciMethod": "Vigilance Estimation",
         "mlMethod": "Signal Processing",
         "abstract": "EEG-based vigilance estimation across sessions and tasks in BCIs.",
-        "link": "https://doi.org/10.1088/1741-2552/acf4a1"
+        "link": "https://pubmed.ncbi.nlm.nih.gov/37611567/"
       }
+  ,
+  
+    {
+      "id": 15,
+      "title": "Connectivity study on resting-state EEG between motor imagery BCI-literate and BCI-illiterate groups",
+      "authors": "H. Park and S. C. Jun",
+      "year": 2024,
+      "type": "Theta",
+      "device": "EEG Cap",
+      "paradigm": "Motor Imagery",
+      "bciMethod": "Functional Connectivity Analysis",
+      "mlMethod": "Signal Processing",
+      "abstract": "Investigation of resting-state EEG connectivity differences between BCI-literate and BCI-illiterate groups during motor imagery.",
+      "link": "https://iopscience.iop.org/article/10.1088/1741-2552/ad6187"
+    },
+    {
+      "id": 16,
+      "title": "EEG decoding for musical emotion with functional connectivity features",
+      "authors": "J. Xu, W. Qian, L. Hu, G. Liao, and Y. Tian",
+      "year": 2024,
+      "type": "Theta",
+      "device": "EEG Cap",
+      "paradigm": "Emotion Recognition",
+      "bciMethod": "Functional Connectivity",
+      "mlMethod": "Machine Learning",
+      "abstract": "EEG-based decoding of musical emotions using functional connectivity features.",
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/S1746809423011771"
+    },
+    {
+      "id": 17,
+      "title": "Real-time estimation of EEG-based engagement in different tasks",
+      "authors": "A. Natalizio, S. Sieghartsleitner, L. Schreiner, M. Walchshofer, A. Esposito, J. Scharinger, H. Pretl, P. Arpaia, M. Parvis, J. Solé-Casals et al.",
+      "year": 2024,
+      "type": "Theta",
+      "device": "EEG Cap",
+      "paradigm": "Cognitive Engagement",
+      "bciMethod": "Real-time Monitoring",
+      "mlMethod": "Signal Processing",
+      "abstract": "Real-time EEG-based engagement estimation across different tasks.",
+      "link": "https://iopscience.iop.org/article/10.1088/1741-2552/ad200d"
+    },
+    {
+      "id": 18,
+      "title": "Multi-channel EEG-based BCI using regression and classification methods for attention training by serious game",
+      "authors": "D. Delisle-Rodriguez, H. L. de Oliveira Junior, J. C. da Silva, M. L. de Souza, T. Bastos, E. M. Nakamura-Palacios, and A. Frizera-Neto",
+      "year": 2023,
+      "type": "Theta",
+      "device": "EEG Cap",
+      "paradigm": "Attention Training",
+      "bciMethod": "Regression and Classification",
+      "mlMethod": "Machine Learning",
+      "abstract": "Multi-channel EEG BCI for attention training using serious games with regression and classification methods.",
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/S1746809423003701"
+    },
+    {
+      "id": 19,
+      "title": "The effect of mental schema evolution on mental workload measurement: an EEG study with simulated quadrotor UAV operation",
+      "authors": "H. Gu, Q. Yao, H. Chen, Z. Ding, X. Zhao, H. Liu, Y. Feng, C. Li, and X. Li",
+      "year": 2022,
+      "type": "Theta",
+      "device": "EEG Cap",
+      "paradigm": "Mental Workload",
+      "bciMethod": "Workload Measurement",
+      "mlMethod": "Signal Processing",
+      "abstract": "EEG study on mental schema evolution's effect on workload measurement during UAV operation simulation.",
+      "link": "https://iopscience.iop.org/article/10.1088/1741-2552/ac6828"
+    },
+    {
+      "id": 20,
+      "title": "Combining neural and behavioral measures enhances adaptive training",
+      "authors": "M. L. Rahman, B. T. Files, A. H. Oiknine, K. A. Pollard, P. Khooshabeh, C. Song, and A. D. Passaro",
+      "year": 2022,
+      "type": "Theta",
+      "device": "EEG Cap",
+      "paradigm": "Adaptive Training",
+      "bciMethod": "Neural-Behavioral Integration",
+      "mlMethod": "Machine Learning",
+      "abstract": "Enhanced adaptive training through combination of neural and behavioral measures.",
+      "link": ""
+    },
+    {
+      "id": 21,
+      "title": "Olfactory neurofeedback: current state and possibilities for further development",
+      "authors": "I. Ninenko, A. Medvedeva, V. L. Efimova, D. F. Kleeva, M. Morozova, and M. A. Lebedev",
+      "year": 2024,
+      "type": "Theta",
+      "device": "EEG Cap",
+      "paradigm": "Olfactory Feedback",
+      "bciMethod": "Neurofeedback",
+      "mlMethod": "Signal Processing",
+      "abstract": "Review of current state and future possibilities for olfactory neurofeedback systems.",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/35237140/"
+    },
+    {
+      "id": 22,
+      "title": "Classification of EEG signals from young adults with dyslexia combining a brain computer interface device and an interactive linguistic software tool",
+      "authors": "P. Christodoulides, A. Miltiadous, K. D. Tzimourta, D. Peschos, G. Ntritsos, V. Zakopoulou, N. Giannakeas, L. G. Astrakas, M. G. Tsipouras, K. I. Tsamis et al.",
+      "year": 2022,
+      "type": "Theta",
+      "device": "EEG Cap",
+      "paradigm": "Dyslexia Assessment",
+      "bciMethod": "EEG Classification",
+      "mlMethod": "Machine Learning",
+      "abstract": "EEG signal classification for dyslexia using BCI and linguistic software tools.",
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/S1746809422001689"
+    },
+    {
+      "id": 23,
+      "title": "Effects of paradigm color and screen brightness on visual fatigue in light environment of night based on eye tracker and EEG acquisition equipment",
+      "authors": "P. Tian, G. Xu, C. Han, X. Zheng, K. Zhang, C. Du, F. Wei, and S. Zhang",
+      "year": 2022,
+      "type": "Theta",
+      "device": "EEG Cap + Eye Tracker",
+      "paradigm": "Visual Fatigue",
+      "bciMethod": "Fatigue Measurement",
+      "mlMethod": "Signal Processing",
+      "abstract": "Study of color and brightness effects on visual fatigue using EEG and eye tracking.",
+      "link": "https://www.mdpi.com/1424-8220/22/11/4082"
+    },
+    {
+      "id": 24,
+      "title": "Investigating EEG-based cross-session and cross-task vigilance estimation in BCI systems",
+      "authors": "K. Wang, S. Qiu, W. Wei, W. Yi, H. He, M. Xu, T.-P. Jung, and D. Ming",
+      "year": 2023,
+      "type": "Theta",
+      "device": "EEG Cap",
+      "paradigm": "Vigilance Estimation",
+      "bciMethod": "Cross-session/Task Analysis",
+      "mlMethod": "Signal Processing",
+      "abstract": "EEG-based vigilance estimation across sessions and tasks in BCIs.",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/37611567/"
+    }
+    ,
+
+    {
+      "id": 25,
+      "title": "Investigating the synergistic neuromodulation effect of bilateral rTMS and VR brain-computer interfaces training in chronic stroke patients",
+      "authors": "M. Afonso, F. Sánchez-Cuesta, Y. González-Zamorano, J. P. Romero, and A. Vourvopoulos",
+      "year": 2024,
+      "type": "Alpha",
+      "device": "EEG Cap + rTMS",
+      "paradigm": "Stroke Rehabilitation",
+      "bciMethod": "VR BCI Training",
+      "mlMethod": "Signal Processing",
+      "abstract": "Study of combined rTMS and VR BCI effects on neuromodulation in stroke patients.",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/39419104/"
+    },
+    {
+      "id": 26,
+      "title": "A wearable brain-computer interface with fewer EEG channels for online motor imagery detection",
+      "authors": "Z. Rao, J. Zhu, Z. Lu, R. Zhang, K. Li, Z. Guan, and Y. Li",
+      "year": 2024,
+      "type": "Alpha",
+      "device": "Wearable EEG",
+      "paradigm": "Motor Imagery",
+      "bciMethod": "Channel Reduction",
+      "mlMethod": "Machine Learning",
+      "abstract": "Development of a wearable BCI with reduced EEG channels for motor imagery detection.",
+      "link": "https://ieeexplore.ieee.org/document/10756748"
+    },
+    {
+      "id": 27,
+      "title": "Motor imagery decoding enhancement based on hybrid EEG-fNIRS signals",
+      "authors": "T. Xu, Z. Zhou, Y. Yang, Y. Li, J. Li, A. Bezerianos, and H. Wang",
+      "year": 2023,
+      "type": "Alpha",
+      "device": "EEG-fNIRS Hybrid",
+      "paradigm": "Motor Imagery",
+      "bciMethod": "Multimodal Fusion",
+      "mlMethod": "Signal Processing",
+      "abstract": "Improved motor imagery decoding using combined EEG and fNIRS signals.",
+      "link": "https://ieeexplore.ieee.org/document/10163822"
+    },
+    {
+      "id": 28,
+      "title": "Frontoparietal dysconnection in covert bipedal activity for enhancing the performance of the motor preparation-based brain-computer interface",
+      "authors": "C.-R. Phang, C.-H. Chen, Y.-Y. Cheng, Y.-J. Chen, and L.-W. Ko",
+      "year": 2022,
+      "type": "Alpha",
+      "device": "EEG Cap",
+      "paradigm": "Motor Preparation",
+      "bciMethod": "Connectivity Analysis",
+      "mlMethod": "Signal Processing",
+      "abstract": "Investigation of frontoparietal connectivity during covert movement for BCI enhancement.",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/36315547/"
+    },
+    {
+      "id": 29,
+      "title": "Investigating user proficiency of motor imagery for EEG-based BCI system to control simulated wheelchair",
+      "authors": "T. Saichoo, P. Boonbrahm, and Y. Punsawad",
+      "year": 2022,
+      "type": "Alpha",
+      "device": "EEG Cap",
+      "paradigm": "Wheelchair Control",
+      "bciMethod": "Motor Imagery",
+      "mlMethod": "Machine Learning",
+      "abstract": "Study of user proficiency in motor imagery for wheelchair control BCI systems.",
+      "link": "https://www.mdpi.com/1424-8220/22/24/9788"
+    },
+    {
+      "id": 30,
+      "title": "Enhancing learning experiences: EEG-based passive BCI system adapts learning speed to cognitive load in real-time, with motivation as catalyst",
+      "authors": "N. Beauchemin, P. Charland, A. Karran, J. Boasen, B. Tadson, S. Sénécal, and P.-M. Léger",
+      "year": 2024,
+      "type": "Alpha",
+      "device": "EEG Cap",
+      "paradigm": "Adaptive Learning",
+      "bciMethod": "Cognitive Load Monitoring",
+      "mlMethod": "Real-time Adaptation",
+      "abstract": "Passive BCI system that adjusts learning speed based on real-time cognitive load and motivation.",
+      "link": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2024.1416683/full"
+    },
+    {
+      "id": 31,
+      "title": "Emotion recognition using narrowband spatial features of electroencephalography",
+      "authors": "I. Farhana, J. Shin, S. Mahmood, M. R. Islam, and M. K. I. Molla",
+      "year": 2023,
+      "type": "Alpha",
+      "device": "EEG Cap",
+      "paradigm": "Emotion Recognition",
+      "bciMethod": "Spatial Feature Extraction",
+      "mlMethod": "Machine Learning",
+      "abstract": "EEG-based emotion recognition using narrowband spatial features.",
+      "link": "https://ieeexplore.ieee.org/document/10107909"
+    },
+    {
+      "id": 32,
+      "title": "Differences in EEG brain activity for black/white versus RGB stimuli",
+      "authors": "A. Khadir and B. Beigzadeh",
+      "year": 2024,
+      "type": "Alpha",
+      "device": "EEG Cap",
+      "paradigm": "Visual Stimuli",
+      "bciMethod": "Spectral Analysis",
+      "mlMethod": "Signal Processing",
+      "abstract": "Comparison of EEG responses to black/white versus RGB color stimuli.",
+      "link": "https://ieeexplore.ieee.org/document/10433479"
+    }
   ]
