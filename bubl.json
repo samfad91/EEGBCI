@@ -1,0 +1,55 @@
+{
+    "children": [
+      {
+        "group": 0,
+        "group_name": "machine learning",
+        "children": [
+          { "name": "RLDA", "group": 0, "group_name": "machine learning", "value": 1 },
+          { "name": "RGBC", "group": 0, "group_name": "machine learning", "value": 1 },
+          { "name": "LDA", "group": 0, "group_name": "machine learning", "value": 3 },
+          { "name": "SVM", "group": 0, "group_name": "machine learning", "value": 6 },
+          { "name": "CSP", "group": 0, "group_name": "machine learning", "value": 1 },
+          { "name": "MLP", "group": 0, "group_name": "machine learning", "value": 1 },
+          { "name": "LR", "group": 0, "group_name": "machine learning", "value": 1 },
+          { "name": "EEG-DG", "group": 0, "group_name": "machine learning", "value": 1 },
+          { "name": "Cubic SVM", "group": 0, "group_name": "machine learning", "value": 1 }
+        ]
+      },
+      {
+        "group": 1,
+        "group_name": "deep learning",
+        "children": [
+          { "name": "CNN", "group": 1, "group_name": "deep learning", "value": 7 },
+          { "name": "GCN", "group": 1, "group_name": "deep learning", "value": 2 },
+          { "name": "Multi-Branch CNN", "group": 1, "group_name": "deep learning", "value": 1 },
+          { "name": "Neural Networks", "group": 1, "group_name": "deep learning", "value": 2 },
+          { "name": "Transformer", "group": 1, "group_name": "deep learning", "value": 6 },
+          { "name": "GATs", "group": 1, "group_name": "deep learning", "value": 1 },
+          { "name": "SIC", "group": 1, "group_name": "deep learning", "value": 1 },
+          { "name": "RGBC", "group": 1, "group_name": "deep learning", "value": 1 },
+          { "name": "MDNN", "group": 1, "group_name": "deep learning", "value": 1 },
+          { "name": "SVM", "group": 1, "group_name": "deep learning", "value": 2 },
+          { "name": "Attention-Based CNN", "group": 1, "group_name": "deep learning", "value": 1 },
+          { "name": "MTAE", "group": 1, "group_name": "deep learning", "value": 1 },
+          { "name": "2D CNN", "group": 1, "group_name": "deep learning", "value": 2 },
+          { "name": "RCNN", "group": 1, "group_name": "deep learning", "value": 1 },
+          { "name": "GAN", "group": 1, "group_name": "deep learning", "value": 1 }
+        ]
+      },
+      {
+        "group": 2,
+        "group_name": "hybrid",
+        "children": [
+          { "name": "CNN + ADFCNN", "group": 2, "group_name": "hybrid", "value": 1 },
+          { "name": "MSAENet + Central Loss", "group": 2, "group_name": "hybrid", "value": 1 },
+          { "name": "CNN + EEGSym", "group": 2, "group_name": "hybrid", "value": 1 },
+          { "name": "CNN + IFNet", "group": 2, "group_name": "hybrid", "value": 1 },
+          { "name": "DSCNN +BLSTM", "group": 2, "group_name": "hybrid", "value": 1 },
+          { "name": "CNN TL", "group": 2, "group_name": "hybrid", "value": 1 },
+          { "name": "EGN+S/DCN+ MB3D + P", "group": 2, "group_name": "hybrid", "value": 1 },
+          { "name": "CNNAM", "group": 2, "group_name": "hybrid", "value": 1 }
+        ]
+      }
+    ]
+  }
+  
