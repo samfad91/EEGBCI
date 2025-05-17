@@ -49,7 +49,7 @@ let state = {
   selectedParadigms: [],
   selectedBciMethods: [],
   selectedMlMethods: [],
-  minYear: 2020 // Default minimum year
+  minYear: 2014 // Default minimum year
 };
 
 // DOM Elements
@@ -201,7 +201,7 @@ function updateActiveFilters() {
   const activeFilters = [];
   
   if (state.searchTerm) activeFilters.push(`Search: "${state.searchTerm}"`);
-  if (state.minYear > 2020) activeFilters.push(`Year: ${state.minYear}-2025`);
+  if (state.minYear > 2014) activeFilters.push(`Year: ${state.minYear}-2025`);
   if (state.selectedTypes.length > 0) activeFilters.push(`Types: ${state.selectedTypes.join(', ')}`);
   if (state.selectedDevices.length > 0) activeFilters.push(`Devices: ${state.selectedDevices.join(', ')}`);
   if (state.selectedParadigms.length > 0) activeFilters.push(`Paradigms: ${state.selectedParadigms.join(', ')}`);
@@ -265,11 +265,11 @@ function setupEventListeners() {
     state.selectedParadigms = [];
     state.selectedBciMethods = [];
     state.selectedMlMethods = [];
-    state.minYear = 2020;
+    state.minYear = 2014;
     
     searchInput.value = '';
-    yearRange.value = 2020;
-    selectedYear.textContent = '2020';
+    yearRange.value = 2014;
+    selectedYear.textContent = '2014';
     renderTypeFilters();
     renderDeviceFilters();
     renderParadigmFilters();
